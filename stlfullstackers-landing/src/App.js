@@ -1,12 +1,20 @@
+// Import React
 import React from 'react';
-import './App.css'; // Ensure Tailwind styles are imported
-import footballHero from './assets/footballHero.jpg';
 
+// Hero image import
+import fantasyHero from './assets/stlfullstackers.jpg';
 
+// Main App component
 function App() {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center justify-center">
-      {/* Navbar */}
+
+      {/* Hero Section */}
+      <div className="w-full h-screen bg-primaryYellow flex items-center justify-center">
+        <img src={fantasyHero} alt="STLFullStackers Hero" className="w-full h-auto" />
+      </div>
+
+      {/* Navbar/Header Section */}
       <nav className="w-full bg-gray-800 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-white text-3xl">STLFullStackers</h1>
@@ -18,16 +26,11 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${footballHero})` }}>
-        <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
-          <div className="text-center text-white">
-            <h1 className="text-6xl font-bold">Welcome to STLFullStackers</h1>
-            <p className="mt-4 text-2xl">Join the Game</p>
-            <button className="mt-8 px-6 py-3 bg-primaryGreen text-white rounded-full">Get Started</button>
-          </div>
-        </div>
-      </section>
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-primaryBrown">STLFullStackers</h1>
+        <p className="mt-4 text-lg text-primaryBlue">Welcome to the world of Fantasy Football, where full-stack developers make the difference!</p>
+        <button className="mt-8 px-6 py-3 bg-primaryGreen text-white rounded-full">Join the Game</button>
+      </div>
     </div>
   );
 }
